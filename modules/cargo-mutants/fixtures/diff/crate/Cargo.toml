@@ -1,0 +1,4 @@
+[package]
+name = "diff-fixture"
+edition = "2024"
+version = "0.0.0"
