@@ -1,0 +1,12 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 1ae3607..cb210f3 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -1,6 +1,6 @@
+ name: checks
+ on:
+-  pull_request:
++  pull_request: [
+ permissions:
+   actions: read # lets hestia detect evicted cache entries upfront
+   contents: read

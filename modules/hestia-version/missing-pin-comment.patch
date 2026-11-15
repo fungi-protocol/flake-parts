@@ -1,0 +1,13 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 1ae3607..22f0c41 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -17,7 +17,7 @@ jobs:
+       - name: Fetch validation history
+         run: bash .github/scripts/fetch-validation-history.sh "$BASE_SHA"
+       - uses: DeterminateSystems/nix-installer-action@3138316df39ed29be04236d7ffc686fa525866aa # main
+-      - uses: Mic92/hestia@dfed9ced335d28978ba74e513939a10db1f71025 # v3.1.0
++      - uses: Mic92/hestia@dfed9ced335d28978ba74e513939a10db1f71025
+         with:
+           version: v3.1.0
+       - run: nix flake check
