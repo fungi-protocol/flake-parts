@@ -1,0 +1,12 @@
+diff --git a/crates/base/src/lib.rs b/crates/base/src/lib.rs
+--- a/crates/base/src/lib.rs
++++ b/crates/base/src/lib.rs
+@@ -3,7 +3,7 @@
+ /// Adds two numbers.
+ ///
+ /// ```
+-/// assert_eq!(fixture_base::add(2, 3), 5);
++/// assert_eq!(fixture_base::add(2, 3), 6);
+ /// ```
+ pub fn add(a: u32, b: u32) -> u32 {
+     a + b

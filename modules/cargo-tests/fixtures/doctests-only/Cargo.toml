@@ -1,0 +1,4 @@
+[package]
+name = "doctests-only"
+edition = "2024"
+version = "0.0.0"
