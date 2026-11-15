@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,7 +38,7 @@
           "x86_64-linux"
         ];
 
-        imports = lib.optional (builtins.pathExists ./tests) ./tests;
+        imports = [ flakeModules.treefmt ] ++ lib.optional (builtins.pathExists ./tests) ./tests;
 
         flake = { inherit flakeModules; };
 

@@ -1,0 +1,6 @@
+diff --git a/settings.yaml b/settings.yaml
+--- a/settings.yaml
++++ b/settings.yaml
+@@ -1 +1 @@
+-name: fixture
++name:    fixture

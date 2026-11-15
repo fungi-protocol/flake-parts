@@ -1,0 +1,15 @@
+diff --git a/crates/app/Cargo.toml b/crates/app/Cargo.toml
+index f0666e3..18e8904 100644
+--- a/crates/app/Cargo.toml
++++ b/crates/app/Cargo.toml
+@@ -1,7 +1,7 @@
++[dependencies]
++fixture-base = { path = "../base" }
++
+ [package]
+ name = "fixture-app"
+ edition.workspace = true
+ version.workspace = true
+-
+-[dependencies]
+-fixture-base = { path = "../base" }
