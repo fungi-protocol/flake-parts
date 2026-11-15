@@ -1,0 +1,12 @@
+diff --git a/crates/base/src/lib.rs b/crates/base/src/lib.rs
+index d464ce4..ff7307f 100644
+--- a/crates/base/src/lib.rs
++++ b/crates/base/src/lib.rs
+@@ -6,6 +6,7 @@
+ /// assert_eq!(fixture_base::add(2, 3), 5);
+ /// ```
+ pub fn add(a: u32, b: u32) -> u32 {
++    // TODO: handle overflow
+     a + b
+ }
+ 
