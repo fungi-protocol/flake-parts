@@ -1,0 +1,14 @@
+diff --git a/crates/base/src/lib.rs b/crates/base/src/lib.rs
+index d464ce4..9c1a314 100644
+--- a/crates/base/src/lib.rs
++++ b/crates/base/src/lib.rs
+@@ -9,6 +9,9 @@ pub fn add(a: u32, b: u32) -> u32 {
+     a + b
+ }
+ 
++#[allow(dead_code)]
++fn unused_helper() {}
++
+ #[cfg(test)]
+ mod tests {
+     use super::*;
