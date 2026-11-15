@@ -1,0 +1,7 @@
+diff --git a/settings.toml b/settings.toml
+--- a/settings.toml
++++ b/settings.toml
+@@ -1,2 +1,2 @@
+ [fixture]
+-value = 1
++value=  1

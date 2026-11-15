@@ -1,0 +1,13 @@
+diff --git a/crates/app/src/lib.rs b/crates/app/src/lib.rs
+index 22b0d01..1042016 100644
+--- a/crates/app/src/lib.rs
++++ b/crates/app/src/lib.rs
+@@ -5,7 +5,7 @@
+ /// ```
+ /// assert_eq!(fixture_app::double(21), 42);
+ /// ```
+-pub fn double(x: u32) -> u32 {
++pub fn double(x:u32)->u32{
+     fixture_base::add(x, x)
+ }
+ 
