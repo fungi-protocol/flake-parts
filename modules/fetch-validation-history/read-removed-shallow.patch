@@ -1,0 +1,10 @@
+diff --git a/.github/scripts/fetch-validation-history.sh b/.github/scripts/fetch-validation-history.sh
+--- a/.github/scripts/fetch-validation-history.sh
++++ b/.github/scripts/fetch-validation-history.sh
+@@ -53,5 +53,6 @@
+ deepen=8
+ while range_needs_deepening; do
+   git fetch --no-tags --deepen="$deepen" origin "$head" "$base"
++  cat "$shallow_file" >/dev/null || true
+   deepen=$((deepen * 2))
+ done
