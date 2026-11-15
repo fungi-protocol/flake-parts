@@ -1,0 +1,20 @@
+diff --git a/Cargo.lock b/Cargo.lock
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -12,3 +12,6 @@ dependencies = [
+ [[package]]
+ name = "fixture-base"
+ version = "0.0.0"
++dependencies = [
++ "fixture-app",
++]
+diff --git a/crates/base/Cargo.toml b/crates/base/Cargo.toml
+--- a/crates/base/Cargo.toml
++++ b/crates/base/Cargo.toml
+@@ -4,3 +4,6 @@ edition.workspace = true
+ version.workspace = true
+ 
+ [dependencies]
++
++[dev-dependencies]
++fixture-app = { path = "../app" }
