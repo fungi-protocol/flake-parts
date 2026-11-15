@@ -1,0 +1,7 @@
+name: Probe
+description: Exercise local action metadata discovery
+runs:
+  using: composite
+  steps:
+    - run: echo probe
+      shell: bash
