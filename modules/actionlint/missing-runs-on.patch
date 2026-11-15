@@ -1,0 +1,12 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 1ae3607..040659d 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -7,7 +7,6 @@ permissions:
+   code-quality: write
+ jobs:
+   checks:
+-    runs-on: ubuntu-latest
+     env:
+       BASE_SHA: ${{ github.event.pull_request.base.sha }}
+     steps:
