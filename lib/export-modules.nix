@@ -5,7 +5,13 @@
   moduleArgs,
 }:
 let
-  moduleEntries = lib.filterAttrs (entry: type: type == "directory" || lib.hasSuffix ".nix" entry) (
+  isModule =
+    entry: type:
+    if type == "directory" then
+      builtins.pathExists (source + "/modules/${entry}/default.nix")
+    else
+      lib.hasSuffix ".nix" entry;
+  moduleEntries = lib.filterAttrs isModule (
     lib.optionalAttrs (builtins.pathExists (source + "/modules")) (
       builtins.readDir (source + "/modules")
     )
