@@ -1,0 +1,21 @@
+diff --git a/.github/scripts/fetch-validation-history.sh b/.github/scripts/fetch-validation-history.sh
+index a127286..87e9754 100644
+--- a/.github/scripts/fetch-validation-history.sh
++++ b/.github/scripts/fetch-validation-history.sh
+@@ -12,7 +12,7 @@ head=$(git rev-parse HEAD)
+ 
+ # ensure base commit is fetched
+ if ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+-  git fetch --no-tags --depth=1 origin "$base"
++    git fetch --no-tags --depth=1 origin "$base"
+ fi
+ 
+ base=$(git rev-parse "$base^{commit}")
+@@ -49,6 +49,6 @@ range_needs_deepening() {
+ 
+ deepen=8
+ while range_needs_deepening; do
+-  git fetch --no-tags --deepen="$deepen" origin "$head" "$base"
++    git fetch --no-tags --deepen="$deepen" origin "$head" "$base"
+   deepen=$((deepen * 2))
+ done

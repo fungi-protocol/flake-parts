@@ -1,0 +1,13 @@
+diff --git a/.github/scripts/fetch-validation-history.sh b/.github/scripts/fetch-validation-history.sh
+index a127286..edb2cd3 100644
+--- a/.github/scripts/fetch-validation-history.sh
++++ b/.github/scripts/fetch-validation-history.sh
+@@ -15,7 +15,7 @@ if ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+   git fetch --no-tags --depth=1 origin "$base"
+ fi
+ 
+-base=$(git rev-parse "$base^{commit}")
++base=$(git rev-parse $base^{commit})
+ shallow_file=$(git rev-parse --git-path shallow)
+ 
+ # git merge-base --is-ancestor $base $head doesn't mean all the commits are present.
