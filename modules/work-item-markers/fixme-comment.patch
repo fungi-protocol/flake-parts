@@ -1,0 +1,12 @@
+diff --git a/crates/app/src/lib.rs b/crates/app/src/lib.rs
+index 22b0d01..93eb914 100644
+--- a/crates/app/src/lib.rs
++++ b/crates/app/src/lib.rs
+@@ -6,6 +6,7 @@
+ /// assert_eq!(fixture_app::double(21), 42);
+ /// ```
+ pub fn double(x: u32) -> u32 {
++    // FIXME: use multiplication
+     fixture_base::add(x, x)
+ }
+ 
