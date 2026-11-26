@@ -1,0 +1,10 @@
+diff --git a/greet.sh b/greet.sh
+--- a/greet.sh
++++ b/greet.sh
+@@ -3,5 +3,5 @@
+ 
+ name=${1:-world}
+ if [[ -n $name ]]; then
+-  echo "hello, $name"
++    echo "hello, $name"
+ fi
