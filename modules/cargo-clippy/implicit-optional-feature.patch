@@ -1,0 +1,29 @@
+--- a/crates/app/Cargo.toml
++++ b/crates/app/Cargo.toml
+@@ -4,4 +4,7 @@
+ version.workspace = true
+ 
+ [dependencies]
+-fixture-base = { path = "../base" }
++fixture-base = { optional = true, path = "../base" }
++
++[features]
++control = []
+--- a/crates/app/src/lib.rs
++++ b/crates/app/src/lib.rs
+@@ -6,7 +6,14 @@
+ /// assert_eq!(fixture_app::double(21), 42);
+ /// ```
+ pub fn double(x: u32) -> u32 {
+-    fixture_base::add(x, x)
++    #[cfg(all(feature = "fixture-base", not(feature = "control")))]
++    let optional_only = x;
++
++    #[cfg(feature = "fixture-base")]
++    let doubled = fixture_base::add(x, x);
++    #[cfg(not(feature = "fixture-base"))]
++    let doubled = x + x;
++    doubled
+ }
+ 
+ #[cfg(test)]
