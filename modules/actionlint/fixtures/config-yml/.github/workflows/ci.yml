@@ -1,0 +1,7 @@
+name: checks
+on: push
+jobs:
+  checks:
+    runs-on: custom-runner
+    steps:
+      - run: echo checked

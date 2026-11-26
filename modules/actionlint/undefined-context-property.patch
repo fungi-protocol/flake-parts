@@ -1,0 +1,10 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 1ae3607..99bc307 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -20,4 +20,4 @@ jobs:
+       - uses: Mic92/hestia@dfed9ced335d28978ba74e513939a10db1f71025 # v3.1.0
+         with:
+           version: v3.1.0
+-      - run: nix flake check
++      - run: nix flake check ${{ github.eventt.number }}
