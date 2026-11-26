@@ -1,0 +1,12 @@
+diff --git a/crates/app/src/lib.rs b/crates/app/src/lib.rs
+index 22b0d01..af99227 100644
+--- a/crates/app/src/lib.rs
++++ b/crates/app/src/lib.rs
+@@ -1,6 +1,6 @@
+ //! A crate of the fixture workspace that depends on `fixture-base`.
+ 
+-/// Doubles a number.
++/// Doubles a number with [`fixture_base::subtract`].
+ ///
+ /// ```
+ /// assert_eq!(fixture_app::double(21), 42);
