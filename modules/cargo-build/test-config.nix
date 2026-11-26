@@ -1,0 +1,3 @@
+{
+  perSystem.cargoWorkspaces.w = { };
+}
