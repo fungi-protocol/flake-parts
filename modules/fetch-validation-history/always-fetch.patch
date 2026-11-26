@@ -1,0 +1,12 @@
+diff --git a/.github/scripts/fetch-validation-history.sh b/.github/scripts/fetch-validation-history.sh
+index a127286..d647a3f 100644
+--- a/.github/scripts/fetch-validation-history.sh
++++ b/.github/scripts/fetch-validation-history.sh
+@@ -48,6 +48,7 @@ range_needs_deepening() {
+ }
+ 
+ deepen=8
++git fetch --no-tags --deepen="$deepen" origin "$head" "$base"
+ while range_needs_deepening; do
+   git fetch --no-tags --deepen="$deepen" origin "$head" "$base"
+   deepen=$((deepen * 2))
